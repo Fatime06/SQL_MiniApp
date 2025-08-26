@@ -12,7 +12,7 @@ namespace Repository.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
-        private readonly AppDBContext _dbContext;
+        protected readonly AppDBContext _dbContext;
         private DbSet<T> _dbSet;
         public BaseRepository()
         {
@@ -25,7 +25,7 @@ namespace Repository.Repositories
 
         }
 
-        public async Task Delete(int id)
+        public async Task DeleteAsync(int id)
         {
             var res =await _dbSet.FindAsync(id);
             _dbSet.Remove(res);
@@ -36,7 +36,7 @@ namespace Repository.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetById(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
             return await _dbSet.FindAsync(id);
         }

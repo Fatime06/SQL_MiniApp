@@ -10,7 +10,6 @@
     <Folder Include="Helpers\Constants\" />
     <Folder Include="Helpers\Exceptions\" />
     <Folder Include="Helpers\Enums\" />
-    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>

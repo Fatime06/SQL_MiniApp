@@ -11,9 +11,8 @@ namespace Repository.Repositories.Interfaces
     public interface IBaseRepository<T> where T : BaseEntity
     {
         Task CreateAsync(T entity);
-        Task Delete(int id);
-        Task<T> GetById(int id);
+        Task DeleteAsync(int id);
+        Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
-        Task UpdateAsync(int id);
     }
 }
