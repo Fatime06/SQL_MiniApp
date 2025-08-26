@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Repository.Repositories.Interfaces;
 using Service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,54 +11,54 @@ namespace Service.Services
 {
     public class EmployeeService : IEmployeeService
     {
-        public Task CreateAsync(Employee employee)
+        private readonly IEmployeeRepository _employeeRepository;
+        public async Task CreateAsync(Employee employee)
         {
-            throw new NotImplementedException();
+           await _employeeRepository.CreateAsync(employee);
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            await _employeeRepository.DeleteAsync(id);
         }
 
-        public Task<IEnumerable<Employee>> GetAllAsync()
+        public async Task<IEnumerable<Employee>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _employeeRepository.GetAllAsync();
         }
 
-        public Task<IEnumerable<Employee>> GetAllEmployeesByAgeAsync(int age)
+        public async Task<IEnumerable<Employee>> GetAllEmployeesByAgeAsync(int age)
         {
-            throw new NotImplementedException();
+            return await _employeeRepository.GetAllEmployeesByAgeAsync(age);
         }
 
-        public Task<Employee> GetByIdAsync(int id)
+        public async Task<Employee> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _employeeRepository.GetByIdAsync(id);
         }
 
-        public Task<int> GetCountAsync()
+        public async Task<int> GetCountAsync()
         {
-            throw new NotImplementedException();
+            return await _employeeRepository.GetCountAsync();
         }
 
-        public Task<IEnumerable<Employee>> GetEmployeeByDepartmentIdAsync(int departmentId)
+        public async Task<IEnumerable<Employee>> GetEmployeeByDepartmentIdAsync(int departmentId)
         {
-            throw new NotImplementedException();
+            return await _employeeRepository.GetEmployeeByDepartmentIdAsync(departmentId);
         }
 
-        public Task<IEnumerable<Employee>> GetEmployeesByDepartmentNameAsync(string departmentName)
+        public async Task<IEnumerable<Employee>> GetEmployeesByDepartmentNameAsync(string departmentName)
         {
-            throw new NotImplementedException();
+            return await _employeeRepository.GetEmployeesByDepartmentNameAsync(departmentName);
+        }
+        public async Task<IEnumerable<Employee>> SearchByNameOrSurnameAsync(string nameOrSurname)
+        {
+            return await _employeeRepository.SearchByNameOrSurnameAsync(nameOrSurname);
         }
 
-        public Task<IEnumerable<Employee>> SearchByNameOrSurnameAsync(string nameOrSurname)
+        public async Task<IEnumerable<Employee>> SortEmployeesByAgeAsync(string sort)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Employee>> SortEmployeesByAgeAsync(string sort)
-        {
-            throw new NotImplementedException();
+            return await _employeeRepository.SortEmployeesByAgeAsync(sort);
         }
     }
 }

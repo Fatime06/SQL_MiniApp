@@ -1,4 +1,7 @@
 ﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Repository.Repositories;
+using Repository.Repositories.Interfaces;
 using Service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,29 +13,37 @@ namespace Service.Services
 {
     public class DepartmentService : IDepartmentService
     {
-        public Task CreateAsync(Department department)
+        private readonly IDepartmentRepository _departmentRepo;
+        private readonly IEmployeeRepository _employeeRepo;
+        public DepartmentService()
         {
-            throw new NotImplementedException();
+            _departmentRepo = new DepartmentRepository();
+            _employeeRepo = new EmployeeRepository();
+
+        }
+        public async Task CreateAsync(Department department)
+        {
+            await _departmentRepo.CreateAsync(department);
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            await _departmentRepo.DeleteAsync(id);
         }
 
-        public Task<IEnumerable<Department>> GetAllAsync()
+        public async Task<IEnumerable<Department>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _departmentRepo.GetAllAsync();
         }
 
-        public Task<Department> GetByIdAsync(int id)
+        public async Task<Department> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _departmentRepo.GetByIdAsync(id);
         }
 
-        public Task<IEnumerable<Department>> SearchAsync(string name)
+        public async Task<IEnumerable<Department>> SearchAsync(string name)
         {
-            throw new NotImplementedException();
+            return await _departmentRepo.SearchAsync(name);
         }
 
         public Task UpdateDepartmentAsync(Department department)
