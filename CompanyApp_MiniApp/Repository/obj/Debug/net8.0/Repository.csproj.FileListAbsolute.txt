@@ -15,3 +15,4 @@ C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Deb
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.pdb
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.genruntimeconfig.cache
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\ref\Repository.dll
+C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.sourcelink.json

@@ -12,3 +12,4 @@ C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Service\obj\Debug\
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Service\obj\Debug\net8.0\Service.pdb
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Service\obj\Debug\net8.0\Service.genruntimeconfig.cache
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Service\obj\Debug\net8.0\ref\Service.dll
+C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Service\obj\Debug\net8.0\Service.sourcelink.json
