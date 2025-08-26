@@ -38,7 +38,7 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<Employee>> SortEmployeesByAgeAsync(string sort)
         {
-            if (sort.ToLower().Trim() == "asc")
+            if (sort?.ToLower().Trim() == "asc")
             {
                 return await _dbContext.employees.OrderBy(m=>m.Age).ToListAsync();
             }
