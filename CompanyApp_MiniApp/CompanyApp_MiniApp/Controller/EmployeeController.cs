@@ -174,11 +174,56 @@ namespace CompanyApp_MiniApp.Controller
             }
         }
 
+
+
+
+        public async Task GetByIdAsync()
+        {
+            Console.WriteLine("Please Enter the Id!");
+        GetId: string idForGet = Console.ReadLine();
+            try
+            {
+                bool trueId = int.TryParse(idForGet, out int getId);
+                if (!trueId)
+                {
+                    Console.WriteLine("Please Enter the Id Again!");
+                    goto GetId;
+                }
+                if (getId < 0)
+                {
+                    Console.WriteLine("Id Can't Be Negative!");
+                    goto GetId;
+                }
+                if (string.IsNullOrWhiteSpace(idForGet))
+                {
+                    Console.WriteLine("Please Enter the Id!");
+                    goto GetId;
+                }
+
+                var employee = await _employeeService.GetByIdAsync(getId);
+                if (employee == null)
+                {
+                    Console.WriteLine("Employee can't Found!");
+                    goto GetId;
+                }
+                string data = ($"Id: {employee.Id} - Name: {employee.Name} - Surname: {employee.Surname} - Age: {employee.Age} - Adress: {employee.Address} - Department: {employee.Department.Name}");
+                Console.WriteLine(data);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                goto GetId;
+            }
+        }
+
+
+
         public async Task GetAllAsync()
         {
             IEnumerable<Employee> employees =await _employeeService.GetAllAsync();
 
-            if (employees == null || employees.Any())
+            if (employees == null || !employees.Any())
             {
                 Console.WriteLine("Employee Not Found!");
                 return;
@@ -209,7 +254,7 @@ namespace CompanyApp_MiniApp.Controller
                     goto GetAge;
                 }
                 IEnumerable<Employee> employees = await _employeeService.GetAllEmployeesByAgeAsync(intAge);
-                if (employees == null || employees.Any())
+                if (employees == null || !employees.Any())
                 {
                     Console.WriteLine("Employee Not Found!");
                     goto GetAge;
@@ -252,7 +297,7 @@ namespace CompanyApp_MiniApp.Controller
                 }
 
                 IEnumerable<Employee> employees = await _employeeService.GetEmployeeByDepartmentIdAsync(intId);
-                if (employees == null || employees.Any())
+                if (employees == null || !employees.Any())
                 {
                     Console.WriteLine("Employee Not Found!");
                     goto DepId;
@@ -288,7 +333,7 @@ namespace CompanyApp_MiniApp.Controller
                 }
 
                 IEnumerable<Employee> employees = await _employeeService.GetEmployeesByDepartmentNameAsync(depName);
-                if (employees == null || employees.Any())
+                if (employees == null || !employees.Any())
                 {
                     Console.WriteLine("Employee Not Found!");
                 }
@@ -316,7 +361,7 @@ namespace CompanyApp_MiniApp.Controller
                 if (string.IsNullOrWhiteSpace(Str))
                 {
                     IEnumerable<Employee> employees = await _employeeService.GetAllAsync();
-                    if (employees == null || employees.Any())
+                    if (employees == null || !employees.Any())
                     {
                         Console.WriteLine("No Employees Found!");
                         goto search;
@@ -337,7 +382,7 @@ namespace CompanyApp_MiniApp.Controller
                     }
 
                     IEnumerable<Employee> employees = await _employeeService.SearchByNameOrSurnameAsync(Str);
-                    if (employees == null || employees.Any())
+                    if (employees == null || !employees.Any())
                     {
                         Console.WriteLine("No Employee Found with the given Name or Surname.");
                         Console.WriteLine("Please Enter a valid Name or Surname again.");
@@ -357,5 +402,54 @@ namespace CompanyApp_MiniApp.Controller
                 goto search;
             }
         }
+
+        public async Task GetCountAsync()
+        {
+            var count = await _employeeService.GetCountAsync();
+            Console.WriteLine($"Employees Count: {count}");
+        }
+
+
+        public async Task SortEmployeesByAgeAsync()
+        {
+            while (true)
+            {
+                Console.WriteLine("Sort by Age: ASC/DESC");
+                string choice = Console.ReadLine().ToUpper();
+
+                IEnumerable<Employee> employees = await _employeeService.GetAllAsync();
+
+                if (employees == null || !employees.Any())
+                {
+                    Console.WriteLine("Employee Not Found!");
+                    return;
+                }
+
+                if (choice == "ASC")
+                {
+                    var res = await _employeeService.SortEmployeesByAgeAsync("ASC");
+                    foreach (var emp in res)
+                    {
+                        Console.WriteLine($"Id: {emp.Id} - Name: {emp.Name} - Surname: {emp.Surname} - Age: {emp.Age} - Address: {emp.Address} - Department: {emp.Department.Name}");
+                    }
+                    break;
+                }
+                else if (choice == "DESC")
+                {
+                    var res = await _employeeService.SortEmployeesByAgeAsync("DESC");
+                    foreach (var emp in res)
+                    {
+                        Console.WriteLine($"Id: {emp.Id} - Name: {emp.Name} - Surname: {emp.Surname} - Age: {emp.Age} - Address: {emp.Address} - Department: {emp.Department.Name}");
+                    }
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter either 'ASC' or 'DESC' to sort.");
+                }
+            }
+        }
+
+
     }
 }

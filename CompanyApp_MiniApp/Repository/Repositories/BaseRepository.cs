@@ -13,31 +13,31 @@ namespace Repository.Repositories
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         protected readonly AppDBContext _dbContext;
-        private DbSet<T> _dbSet;
+        private DbSet<T> _table;
         public BaseRepository()
         {
             _dbContext = new AppDBContext();
-            _dbSet = _dbContext.Set<T>();
+            _table = _dbContext.Set<T>();
         }
         public async Task CreateAsync(T entity)
         {
-            await _dbSet.AddAsync(entity);
+            await _table.AddAsync(entity);
 
         }
 
         public async Task DeleteAsync(T entity)
         {
-              _dbSet.Remove(entity);
+            _table.Remove(entity);
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await _dbSet.ToListAsync();
+            return await _table.ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _dbSet.FindAsync(id);
+            return await _table.FindAsync(id);
         }
 
         public Task UpdateAsync(int id)

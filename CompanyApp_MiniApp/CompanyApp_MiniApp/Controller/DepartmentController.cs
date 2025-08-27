@@ -18,7 +18,7 @@ namespace CompanyApp_MiniApp.Controller
             _deparmentService = new DepartmentService();
         }
         
-        public async Task CreateAsyn()
+        public async Task CreateAsync()
         {
         Name:
             try
