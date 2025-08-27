@@ -19,7 +19,12 @@ namespace Service.Services
 
         public async Task DeleteAsync(int id)
         {
-            await _employeeRepository.DeleteAsync(id);
+            var delEmp =await _employeeRepository.GetByIdAsync(id);
+            if (delEmp == null)
+            {
+
+            }
+            await _employeeRepository.DeleteAsync(delEmp);
         }
 
         public async Task<IEnumerable<Employee>> GetAllAsync()
@@ -29,12 +34,22 @@ namespace Service.Services
 
         public async Task<IEnumerable<Employee>> GetAllEmployeesByAgeAsync(int age)
         {
-            return await _employeeRepository.GetAllEmployeesByAgeAsync(age);
+            var all = await _employeeRepository.GetAllEmployeesByAgeAsync(age);
+            if (all == null)
+            {
+
+            }
+            return all;
         }
 
         public async Task<Employee> GetByIdAsync(int id)
         {
-            return await _employeeRepository.GetByIdAsync(id);
+            var allId= await _employeeRepository.GetByIdAsync(id);
+            if(allId == null)
+            {
+
+            }
+            return allId;
         }
 
         public async Task<int> GetCountAsync()
@@ -44,16 +59,31 @@ namespace Service.Services
 
         public async Task<IEnumerable<Employee>> GetEmployeeByDepartmentIdAsync(int departmentId)
         {
-            return await _employeeRepository.GetEmployeeByDepartmentIdAsync(departmentId);
+            var empId = await _employeeRepository.GetEmployeeByDepartmentIdAsync(departmentId);
+            if (empId == null)
+            {
+
+            }
+            return empId;
         }
 
         public async Task<IEnumerable<Employee>> GetEmployeesByDepartmentNameAsync(string departmentName)
         {
-            return await _employeeRepository.GetEmployeesByDepartmentNameAsync(departmentName);
+            var depN = await _employeeRepository.GetEmployeesByDepartmentNameAsync(departmentName);
+            if (depN == null)
+            {
+
+            }
+            return depN;
         }
         public async Task<IEnumerable<Employee>> SearchByNameOrSurnameAsync(string nameOrSurname)
         {
-            return await _employeeRepository.SearchByNameOrSurnameAsync(nameOrSurname);
+            var searchedN = await _employeeRepository.SearchByNameOrSurnameAsync(nameOrSurname);
+            if (searchedN == null)
+            {
+
+            }
+            return searchedN;
         }
 
         public async Task<IEnumerable<Employee>> SortEmployeesByAgeAsync(string sort)

@@ -25,10 +25,9 @@ namespace Repository.Repositories
 
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(T entity)
         {
-            var res =await _dbSet.FindAsync(id);
-            _dbSet.Remove(res);
+              _dbSet.Remove(entity);
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()

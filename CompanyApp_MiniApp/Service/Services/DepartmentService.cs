@@ -28,7 +28,13 @@ namespace Service.Services
 
         public async Task DeleteAsync(int id)
         {
-            await _departmentRepo.DeleteAsync(id);
+
+           var delDepart = await _departmentRepo.GetByIdAsync(id);
+            if (delDepart == null)
+            {
+
+            }
+          await _departmentRepo.DeleteAsync(delDepart);
         }
 
         public async Task<IEnumerable<Department>> GetAllAsync()
@@ -38,12 +44,22 @@ namespace Service.Services
 
         public async Task<Department> GetByIdAsync(int id)
         {
-            return await _departmentRepo.GetByIdAsync(id);
+          var result= await _departmentRepo.GetByIdAsync(id);
+            if (result == null)
+            {
+
+            }
+            return result;
         }
 
         public async Task<IEnumerable<Department>> SearchAsync(string name)
         {
-            return await _departmentRepo.SearchAsync(name);
+            var searched =  await _departmentRepo.SearchAsync(name);
+            if (searched == null)
+            {
+
+            }
+            return searched;
         }
 
         public Task UpdateDepartmentAsync(Department department)
