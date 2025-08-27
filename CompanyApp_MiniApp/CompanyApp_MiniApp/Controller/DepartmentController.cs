@@ -88,13 +88,141 @@ namespace CompanyApp_MiniApp.Controller
             try
             {
                 Console.WriteLine("Please Enter the Id!");
-            }
-            catch (Exception)
-            {
+                string delId = Console.ReadLine();
+                bool isInt = int.TryParse(delId, out int givenInt);
+                if (!isInt)
+                {
+                    Console.WriteLine("Department Id's Format is Wrong! Please Try Again.");
+                    goto Delete;
+                }
+                if (string.IsNullOrWhiteSpace(delId))
+                {
+                    Console.WriteLine("Please Enter the Id!");
+                    goto Delete;
+                }
+                if (givenInt <= 0)
+                {
+                    Console.WriteLine("Department Id can't be Negative or Zero!");
+                    goto Delete;
+                }
 
-                throw;
+                var deletedDep = _deparmentService.GetByIdAsync(givenInt);
+
+                if (deletedDep == null)
+                {
+                    Console.WriteLine("Department not Found!");
+                    goto Delete;
+                }
+               await _deparmentService.DeleteAsync(givenInt);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         } 
+
+        public async Task GetAllAsync()
+        {
+            IEnumerable<Department> departments = await _deparmentService.GetAllAsync();
+            if(departments == null || !departments.Any())
+            {
+                Console.WriteLine("Department can't Found!");
+                return;
+            }
+            foreach (var item in departments)
+            {
+                string depart = ($"Id: {item.Id} - Name: {item.Name} - Capacity: {item.Capacity}");
+                Console.WriteLine(depart);
+            }
+        }
+
+        public async Task GetById()
+        {
+            Id:
+            try
+            {
+                Console.WriteLine("Please Enter the Id!");
+                string exId = Console.ReadLine();
+                bool isInt = int.TryParse(exId, out int nextId);
+                if (!isInt)
+                {
+                    Console.WriteLine("Department Id's Format is Wrong! Please Try Again.");
+                    goto Id;
+                }
+                if (string.IsNullOrWhiteSpace(exId))
+                {
+                    Console.WriteLine("Please Enter the Id!");
+                    goto Id;
+                }
+                if (nextId <= 0)
+                {
+                    Console.WriteLine("Department Id can't be Negative or Zero!");
+                    goto Id;
+                }
+
+                await _deparmentService.GetByIdAsync(nextId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+        }
+
+
+        public async Task SearchAsync()
+        {
+            while (true)
+            {
+                Console.WriteLine("Please Enter Name for Search: ");
+                string searchName = Console.ReadLine();
+
+                try
+                {
+                    if (string.IsNullOrWhiteSpace(searchName))
+                    {
+                        IEnumerable<Department> department =await  _deparmentService.GetAllAsync();
+
+                        if (department == null || department.Any())
+                        {
+                            Console.WriteLine("Department Not Found!");
+                            continue;
+                        }
+
+                        foreach (var item in department)
+                        {
+                            string final = ($"Id: {item.Id} - Name: {item.Name} - Capacity: {item.Capacity}");
+                            Console.WriteLine(final);
+                        }
+                    }
+                    else
+                    {
+                        IEnumerable<Department> department = await _deparmentService.SearchAsync(searchName);
+
+                        if (department == null || department.Any()) 
+                        {
+                            Console.WriteLine("Department not Found with the Given Name.");
+                            continue;
+                        }
+                        else
+                        {
+                            foreach (var item in department)
+                            {
+                                string final = ($"Id: {item.Id} - Name: {item.Name} - Capacity: {item.Capacity}");
+                                Console.WriteLine(final);
+                            }
+                        }
+                    }
+
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    continue;
+                }
+            }
+        }
     }
 
 }
