@@ -118,6 +118,7 @@ namespace CompanyApp_MiniApp.Controller
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                goto Delete;
             }
         } 
 
@@ -165,6 +166,7 @@ namespace CompanyApp_MiniApp.Controller
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                goto Id;
             }
             
         }
