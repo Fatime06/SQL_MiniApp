@@ -13,7 +13,7 @@ namespace Service.Services.Interfaces
         Task DeleteAsync(int id);
         Task<Department> GetByIdAsync(int id);
         Task<IEnumerable<Department>> GetAllAsync();
-        Task UpdateDepartmentAsync(Department department);
+        Task UpdateDepartmentAsync(int Id,Department department);
         Task<IEnumerable<Department>> SearchAsync(string name);
     }
 }

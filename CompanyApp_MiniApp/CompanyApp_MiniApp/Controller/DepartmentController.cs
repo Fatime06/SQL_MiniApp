@@ -17,7 +17,7 @@ namespace CompanyApp_MiniApp.Controller
         {
             _deparmentService = new DepartmentService();
         }
-        
+
         public async Task CreateAsync()
         {
         Name:
@@ -84,7 +84,7 @@ namespace CompanyApp_MiniApp.Controller
 
         public async Task DeleteAsync()
         {
-            Delete:
+        Delete:
             try
             {
                 Console.WriteLine("Please Enter the Id!");
@@ -113,19 +113,19 @@ namespace CompanyApp_MiniApp.Controller
                     Console.WriteLine("Department not Found!");
                     goto Delete;
                 }
-               await _deparmentService.DeleteAsync(givenInt);
+                await _deparmentService.DeleteAsync(givenInt);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 goto Delete;
             }
-        } 
+        }
 
         public async Task GetAllAsync()
         {
             IEnumerable<Department> departments = await _deparmentService.GetAllAsync();
-            if(departments == null || !departments.Any())
+            if (departments == null || !departments.Any())
             {
                 Console.WriteLine("Department can't Found!");
                 return;
@@ -139,7 +139,7 @@ namespace CompanyApp_MiniApp.Controller
 
         public async Task GetById()
         {
-            Id:
+        Id:
             try
             {
                 Console.WriteLine("Please Enter the Id!");
@@ -168,7 +168,7 @@ namespace CompanyApp_MiniApp.Controller
                 Console.WriteLine(ex.Message);
                 goto Id;
             }
-            
+
         }
 
 
@@ -183,7 +183,7 @@ namespace CompanyApp_MiniApp.Controller
                 {
                     if (string.IsNullOrWhiteSpace(searchName))
                     {
-                        IEnumerable<Department> department =await  _deparmentService.GetAllAsync();
+                        IEnumerable<Department> department = await _deparmentService.GetAllAsync();
 
                         if (department == null || department.Any())
                         {
@@ -201,7 +201,7 @@ namespace CompanyApp_MiniApp.Controller
                     {
                         IEnumerable<Department> department = await _deparmentService.SearchAsync(searchName);
 
-                        if (department == null || department.Any()) 
+                        if (department == null || department.Any())
                         {
                             Console.WriteLine("Department not Found with the Given Name.");
                             continue;
@@ -225,6 +225,87 @@ namespace CompanyApp_MiniApp.Controller
                 }
             }
         }
-    }
 
+        public async Task UpdateDepartmentAsync()
+        {
+        top:
+
+            try
+            {
+                Console.WriteLine("Please Enter the Department Id:");
+                string Id = Console.ReadLine();
+                int givenId;
+
+                bool isTrueFormat = int.TryParse(Id, out givenId);
+                if (!isTrueFormat)
+                {
+                    Console.WriteLine("Id Format is Wrong!");
+                    goto top;
+                }
+                if (givenId <= 0)
+                {
+                    Console.WriteLine("Id can't be Negative!");
+                    goto top;
+                }
+                var existingDepartment = await _deparmentService.GetByIdAsync(givenId);
+                if (existingDepartment == null)
+                {
+                    Console.WriteLine("Department not Found!");
+                    goto top;
+                }
+                Console.WriteLine($"Current department name is {existingDepartment.Name}");
+
+            nameUpdate:
+                Console.WriteLine("Please Enter the New Name: ");
+                string newName = Console.ReadLine()?.Trim();
+                if (string.IsNullOrWhiteSpace(newName))
+                {
+                    newName = existingDepartment.Name;
+                }
+
+                var existingDepartments = await _deparmentService.SearchAsync(newName);
+                if (existingDepartments != null && existingDepartments.Any(d => d.Name.Equals(newName, StringComparison.OrdinalIgnoreCase) && d.Id != existingDepartment.Id))
+                {
+                    Console.WriteLine("This Department Name is Already Exist! Please Enter Another one: ");
+                    goto nameUpdate;
+                }
+            capacityUpdate:
+                Console.WriteLine($"Current capacity is: {existingDepartment.Capacity}");
+                Console.WriteLine("Please Enter the New Capacity");
+
+                string newCapacityInput = Console.ReadLine();
+                int givencapacity;
+                bool isCorrect = int.TryParse(newCapacityInput, out givencapacity);
+                if (!isCorrect)
+                {
+                    Console.WriteLine("Capacity Format ia Wrong! Please Insert Again: ");
+                    goto capacityUpdate;
+                }
+
+                if (string.IsNullOrWhiteSpace(newCapacityInput))
+                {
+                    newCapacityInput = existingDepartment.Capacity.ToString();
+                }
+
+
+
+                if (givencapacity <= 0)
+                {
+                    Console.WriteLine("Capacity Must be a Positive Number!");
+                    goto capacityUpdate;
+                }
+
+                existingDepartment.Name = newName;
+                existingDepartment.Capacity = givencapacity;
+
+                await _deparmentService.UpdateDepartmentAsync(givenId, existingDepartment);
+                Console.WriteLine("Department Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                goto top;
+            }
+        }
+    }
 }

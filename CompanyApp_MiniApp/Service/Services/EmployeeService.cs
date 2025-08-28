@@ -1,5 +1,7 @@
 ﻿using Domain.Entities;
 using Repository.Repositories.Interfaces;
+using Service.Helpers.Constants;
+using Service.Helpers.Exceptions;
 using Service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,7 @@ namespace Service.Services
             var delEmp =await _employeeRepository.GetByIdAsync(id);
             if (delEmp == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             await _employeeRepository.DeleteAsync(delEmp);
         }
@@ -37,7 +39,7 @@ namespace Service.Services
             var all = await _employeeRepository.GetAllEmployeesByAgeAsync(age);
             if (all == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return all;
         }
@@ -47,7 +49,7 @@ namespace Service.Services
             var allId= await _employeeRepository.GetByIdAsync(id);
             if(allId == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return allId;
         }
@@ -62,7 +64,7 @@ namespace Service.Services
             var empId = await _employeeRepository.GetEmployeeByDepartmentIdAsync(departmentId);
             if (empId == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return empId;
         }
@@ -72,7 +74,7 @@ namespace Service.Services
             var depN = await _employeeRepository.GetEmployeesByDepartmentNameAsync(departmentName);
             if (depN == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return depN;
         }
@@ -81,7 +83,7 @@ namespace Service.Services
             var searchedN = await _employeeRepository.SearchByNameOrSurnameAsync(nameOrSurname);
             if (searchedN == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return searchedN;
         }
@@ -90,5 +92,7 @@ namespace Service.Services
         {
             return await _employeeRepository.SortEmployeesByAgeAsync(sort);
         }
+
+
     }
 }

@@ -3,68 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\companyapp_miniapp\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|solutionrelative:companyapp_miniapp\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\companyapp_miniapp\\controller\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|solutionrelative:companyapp_miniapp\\controller\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\companyapp_miniapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|solutionrelative:companyapp_miniapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\companyapp_miniapp\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|solutionrelative:companyapp_miniapp\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\companyapp_miniapp\\controller\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|solutionrelative:companyapp_miniapp\\controller\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\helpers\\enums\\operations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\helpers\\enums\\operations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\helpers\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\helpers\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\helpers\\constants\\exceptionmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\helpers\\constants\\exceptionmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\helpers\\enums\\operations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\helpers\\enums\\operations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\companyapp_miniapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA3A0CB-F443-4D0C-85DC-EFADCD59B5D1}|CompanyApp_MiniApp\\CompanyApp_MiniApp.csproj|solutionrelative:companyapp_miniapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\service\\helpers\\constants\\exceptionmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2092216-15AB-434F-A671-3DC1CFB10CD2}|Service\\Service.csproj|solutionrelative:service\\helpers\\constants\\exceptionmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A20301F-07BC-4EF9-B276-946DEED96D1E}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\sql_miniapp\\companyapp_miniapp\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,137 +94,46 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:49.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DepartmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\DepartmentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\DepartmentRepository.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\DepartmentRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\DepartmentRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:47:45.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\EmployeeRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\EmployeeRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\EmployeeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:48:01.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IDepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T12:40:57.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "DepartmentService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\DepartmentService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\DepartmentService.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\DepartmentService.cs",
               "RelativeToolTip": "Service\\Services\\DepartmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAkwEUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T07:49:07.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
-              "RelativeToolTip": "CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T06:43:56.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IDepartmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T09:52:22.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T09:51:59.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IEmployeeService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IEmployeeService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\IEmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T12:41:19.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\EmployeeService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\EmployeeService.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\EmployeeService.cs",
               "RelativeToolTip": "Service\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwFUAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T07:49:21.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
+              "RelativeToolTip": "CompanyApp_MiniApp\\Controller\\EmployeeController.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAkwCkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T06:43:56.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "IEmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IEmployeeRepository.cs",
@@ -237,33 +146,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Program.cs",
-              "RelativeDocumentMoniker": "CompanyApp_MiniApp\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Program.cs",
-              "RelativeToolTip": "CompanyApp_MiniApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:34:31.486Z",
+              "WhenOpened": "2025-08-26T07:47:45.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Controller\\DepartmentController.cs",
               "RelativeDocumentMoniker": "CompanyApp_MiniApp\\Controller\\DepartmentController.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Controller\\DepartmentController.cs",
               "RelativeToolTip": "CompanyApp_MiniApp\\Controller\\DepartmentController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA2wBcAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAqwDUBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-27T06:43:43.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
+              "Title": "Operations.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Helpers\\Enums\\Operations.cs",
+              "RelativeDocumentMoniker": "Service\\Helpers\\Enums\\Operations.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Helpers\\Enums\\Operations.cs",
+              "RelativeToolTip": "Service\\Helpers\\Enums\\Operations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T06:35:02.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "NotFoundException.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Helpers\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "Service\\Helpers\\Exceptions\\NotFoundException.cs",
@@ -271,11 +193,100 @@
               "RelativeToolTip": "Service\\Helpers\\Exceptions\\NotFoundException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T06:34:32.269Z"
+              "WhenOpened": "2025-08-27T06:34:32.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T07:46:49.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDepartmentService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IDepartmentService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IDepartmentService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IDepartmentService.cs",
+              "RelativeToolTip": "Service\\Services\\Interfaces\\IDepartmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T12:40:57.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T09:51:59.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IDepartmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T09:52:22.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Repository\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T07:48:01.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IEmployeeService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Services\\Interfaces\\IEmployeeService.cs",
+              "RelativeToolTip": "Service\\Services\\Interfaces\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T12:41:19.605Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Program.cs",
+              "RelativeDocumentMoniker": "CompanyApp_MiniApp\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\CompanyApp_MiniApp\\Program.cs",
+              "RelativeToolTip": "CompanyApp_MiniApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T07:34:31.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ExceptionMessage.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Helpers\\Constants\\ExceptionMessage.cs",
               "RelativeDocumentMoniker": "Service\\Helpers\\Constants\\ExceptionMessage.cs",
@@ -284,18 +295,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-27T06:34:52.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Operations.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Helpers\\Enums\\Operations.cs",
-              "RelativeDocumentMoniker": "Service\\Helpers\\Enums\\Operations.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\SQL_MiniApp\\CompanyApp_MiniApp\\Service\\Helpers\\Enums\\Operations.cs",
-              "RelativeToolTip": "Service\\Helpers\\Enums\\Operations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T06:35:02.59Z"
             },
             {
               "$type": "Document",

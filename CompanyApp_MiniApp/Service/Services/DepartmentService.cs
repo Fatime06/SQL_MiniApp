@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Repositories;
 using Repository.Repositories.Interfaces;
+using Service.Helpers.Constants;
+using Service.Helpers.Exceptions;
 using Service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -32,7 +34,7 @@ namespace Service.Services
            var delDepart = await _departmentRepo.GetByIdAsync(id);
             if (delDepart == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
           await _departmentRepo.DeleteAsync(delDepart);
         }
@@ -47,7 +49,7 @@ namespace Service.Services
           var result= await _departmentRepo.GetByIdAsync(id);
             if (result == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return result;
         }
@@ -57,14 +59,31 @@ namespace Service.Services
             var searched =  await _departmentRepo.SearchAsync(name);
             if (searched == null)
             {
-
+                throw new NotFoundException(ExceptionMessage.NotFound);
             }
             return searched;
         }
 
-        public Task UpdateDepartmentAsync(Department department)
+        public async Task UpdateDepartmentAsync(int id, Department department)
         {
-            throw new NotImplementedException();
+            var existDepartment = await _departmentRepo.GetByIdAsync(id);
+            if (existDepartment == null) return;
+
+            if (!string.IsNullOrWhiteSpace(department.Name))
+            {
+                existDepartment.Name = department.Name;
+            }
+
+            if (department.Capacity > 0)
+            {
+                existDepartment.Capacity = department.Capacity;
+            }
+
+
+            await _departmentRepo.UpdateDepartmentAsync(existDepartment);
         }
+
+
+
     }
 }

@@ -17,9 +17,10 @@ namespace Repository.Repositories
             return await _dbContext.departments.Where(m => m.Name.ToLower().Contains(name.ToLower())).ToListAsync();
         }
 
-        public Task UpdateDepartmentAsync(Department department)
+        public async Task UpdateDepartmentAsync(Department department)
         {
-            throw new NotImplementedException();
+            _dbContext.departments.Update(department);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
