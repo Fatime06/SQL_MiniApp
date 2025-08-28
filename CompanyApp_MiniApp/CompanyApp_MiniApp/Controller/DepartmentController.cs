@@ -137,7 +137,7 @@ namespace CompanyApp_MiniApp.Controller
             }
         }
 
-        public async Task GetById()
+        public async Task GetByIdAsync()
         {
         Id:
             try
