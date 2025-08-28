@@ -161,7 +161,10 @@ namespace CompanyApp_MiniApp.Controller
                     goto Id;
                 }
 
-                await _deparmentService.GetByIdAsync(nextId);
+                var department = await _deparmentService.GetByIdAsync(nextId);
+                string dep = $"Id: {department.Id} - Name: {department.Name} - Capacity: {department.Capacity}";
+                Console.WriteLine(dep);
+
             }
             catch (Exception ex)
             {
@@ -185,7 +188,7 @@ namespace CompanyApp_MiniApp.Controller
                     {
                         IEnumerable<Department> department = await _deparmentService.GetAllAsync();
 
-                        if (department == null || department.Any())
+                        if (department == null || !department.Any())
                         {
                             Console.WriteLine("Department Not Found!");
                             continue;
@@ -201,7 +204,7 @@ namespace CompanyApp_MiniApp.Controller
                     {
                         IEnumerable<Department> department = await _deparmentService.SearchAsync(searchName);
 
-                        if (department == null || department.Any())
+                        if (department == null || !department.Any())
                         {
                             Console.WriteLine("Department not Found with the Given Name.");
                             continue;

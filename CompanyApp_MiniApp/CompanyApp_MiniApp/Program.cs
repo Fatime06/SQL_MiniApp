@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using CompanyApp_MiniApp.Controller;
+﻿using CompanyApp_MiniApp.Controller;
 using Service.Helpers.Enums;
 
 Console.WriteLine("Hello, World!");
@@ -37,10 +36,10 @@ Operation1: string operationStr1 = Console.ReadLine();
                 await departmentController.UpdateDepartmentAsync();
                 break;
             case (int)Operations.EmployeeCreate:
-                await employeeController.GetByIdAsync();
+                await employeeController.CreateAsync();
                 break;
             case (int)Operations.EmployeeDelete:
-                await employeeController.GetByIdAsync();
+                await employeeController.DeleteAsync();
                 break;
             case (int)Operations.EmployeeById:
                 await employeeController.GetByIdAsync();
@@ -92,17 +91,17 @@ void ShowMenu()
     Console.WriteLine("3  - Get Department by ID");
     Console.WriteLine("4  - Get All Departments");
     Console.WriteLine("5  - Search Department by Name");
-    Console.WriteLine("6  - Create Employee");
-    Console.WriteLine("7  - Delete Employee");
-    Console.WriteLine("8  - Get Employee by ID");
-    Console.WriteLine("9  - Get All Employees");
-    Console.WriteLine("10 - Get Employees by Age");
-    Console.WriteLine("11 - Get Employees by Department ID");
-    Console.WriteLine("12 - Get Employees by Department Name");
-    Console.WriteLine("13 - Search Employee by Name or Surname");
-    Console.WriteLine("14 - Get Employees Count");
-    Console.WriteLine("15 - Sort Employees by Age");
-    Console.WriteLine("16 - Update Department");
+    Console.WriteLine("6 - Update Department");
+    Console.WriteLine("7  - Create Employee");
+    Console.WriteLine("8  - Delete Employee");
+    Console.WriteLine("9  - Get Employee by ID");
+    Console.WriteLine("10  - Get All Employees");
+    Console.WriteLine("11 - Get Employees by Age");
+    Console.WriteLine("12 - Get Employees by Department ID");
+    Console.WriteLine("13 - Get Employees by Department Name");
+    Console.WriteLine("14 - Search Employee by Name or Surname");
+    Console.WriteLine("15 - Get Employees Count");
+    Console.WriteLine("16 - Sort Employees by Age");
 
 
     Console.WriteLine("===========================");

@@ -55,7 +55,7 @@ namespace CompanyApp_MiniApp.Controller
                 goto Surname;
             }
 
-            Console.WriteLine("Please Enter the Age");
+            Console.WriteLine("Please Enter the Age: ");
         Age: string givenAge = Console.ReadLine();
             bool isTrue = int.TryParse(givenAge, out int newAge);
             if (string.IsNullOrWhiteSpace(givenAge))
@@ -103,16 +103,16 @@ namespace CompanyApp_MiniApp.Controller
                     Console.WriteLine("Please Enter the Id!");
                     goto New;
                 }
-                if (await _departmentService.GetByIdAsync(newId) == null)
+
+                var department = await _departmentService.GetByIdAsync(newId);
+                if (department==null)
                 {
                     Console.WriteLine("Department can't be Found!");
                 }
 
-                var department = await _departmentService.GetByIdAsync(newId);
-
                 var employee = new Employee
                 {
-                    Department = department,
+                    DepartmentId = department.Id,
                     Name = givenName,
                     Surname = givenSurname,
                     Age = newAge,
@@ -206,12 +206,12 @@ namespace CompanyApp_MiniApp.Controller
                     Console.WriteLine("Employee can't Found!");
                     goto GetId;
                 }
+
                 string data = ($"Id: {employee.Id} - Name: {employee.Name} - Surname: {employee.Surname} - Age: {employee.Age} - Adress: {employee.Address} - Department: {employee.Department.Name}");
                 Console.WriteLine(data);
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
                 goto GetId;
             }

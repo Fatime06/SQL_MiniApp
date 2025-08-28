@@ -40,6 +40,11 @@ namespace Repository.Repositories
             return await _table.FindAsync(id);
         }
 
+        public async Task SaveChangeAsync()
+        {
+            await _dbContext.SaveChangesAsync();
+        }
+
         public Task UpdateAsync(int id)
         {
             throw new NotImplementedException();

@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Helpers.Constants;
 using Service.Helpers.Exceptions;
@@ -14,9 +15,14 @@ namespace Service.Services
     public class EmployeeService : IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository;
+        public EmployeeService()
+        {
+            _employeeRepository = new EmployeeRepository();
+        }
         public async Task CreateAsync(Employee employee)
         {
            await _employeeRepository.CreateAsync(employee);
+           await _employeeRepository.SaveChangeAsync();
         }
 
         public async Task DeleteAsync(int id)

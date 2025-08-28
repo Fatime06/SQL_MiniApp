@@ -14,5 +14,6 @@ namespace Repository.Repositories.Interfaces
         Task DeleteAsync(T entity);
         Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
+        Task SaveChangeAsync();
     }
 }

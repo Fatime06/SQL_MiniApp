@@ -26,6 +26,7 @@ namespace Service.Services
         public async Task CreateAsync(Department department)
         {
             await _departmentRepo.CreateAsync(department);
+            await _departmentRepo.SaveChangeAsync();
         }
 
         public async Task DeleteAsync(int id)
@@ -46,7 +47,7 @@ namespace Service.Services
 
         public async Task<Department> GetByIdAsync(int id)
         {
-          var result= await _departmentRepo.GetByIdAsync(id);
+          var result = await _departmentRepo.GetByIdAsync(id);
             if (result == null)
             {
                 throw new NotFoundException(ExceptionMessage.NotFound);
