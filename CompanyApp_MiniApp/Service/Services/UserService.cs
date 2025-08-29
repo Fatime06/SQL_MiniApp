@@ -32,6 +32,7 @@ namespace Service.Services
         public async Task RegisterAsync(User user)
         {
             await _userRepository.CreateAsync(user);
+            await _userRepository.SaveChangeAsync();
         }
     }
 }
