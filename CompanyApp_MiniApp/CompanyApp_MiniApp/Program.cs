@@ -10,8 +10,6 @@ UserController userController = new UserController();
 
 
 
-await userController.GetAllAsync();
-
 while (!userController.Login)
 {
     Console.WriteLine("Login options: ");

@@ -19,7 +19,6 @@ namespace CompanyApp_MiniApp.Controller
             _employeeService = new EmployeeService();
             _departmentService = new DepartmentService();
         }
-
         public async Task CreateAsync()
         {
             Console.WriteLine("Please Enter the Name: ");
@@ -173,10 +172,6 @@ namespace CompanyApp_MiniApp.Controller
                 goto delete;
             }
         }
-
-
-
-
         public async Task GetByIdAsync()
         {
             Console.WriteLine("Please Enter the Id!");
@@ -216,9 +211,6 @@ namespace CompanyApp_MiniApp.Controller
                 goto GetId;
             }
         }
-
-
-
         public async Task GetAllAsync()
         {
             IEnumerable<Employee> employees =await _employeeService.GetAllAsync();
@@ -235,7 +227,6 @@ namespace CompanyApp_MiniApp.Controller
                 Console.WriteLine(result);
             }
         }
-
         public async Task GetAllEmployeesByAgeAsync()
         {
             Console.WriteLine("Please Enter the Age: ");
@@ -272,7 +263,6 @@ namespace CompanyApp_MiniApp.Controller
                 goto GetAge;
             }
         }
-
         public async Task GetEmployeeByDepartmentIdAsync()
         {
             Console.WriteLine("Please Enter the Department Id: ");
@@ -323,7 +313,7 @@ namespace CompanyApp_MiniApp.Controller
             {
                 if (string.IsNullOrWhiteSpace(depName))
                 {
-                    Console.WriteLine("Please Enter the Department Id!");
+                    Console.WriteLine("Please Enter the Department Name!");
                     goto DepN;
                 }
                 if (!Regex.IsMatch(depName, "^[a-zA-Z]+$"))
@@ -332,26 +322,31 @@ namespace CompanyApp_MiniApp.Controller
                     goto DepN;
                 }
 
-                IEnumerable<Employee> employees = await _employeeService.GetEmployeesByDepartmentNameAsync(depName);
-                if (employees == null || !employees.Any())
+                IEnumerable<Employee> employees = await _employeeService.GetAllAsync();
+
+                employees = employees
+                    .Where(e => e.Department.Name.Contains(depName, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+
+                if (!employees.Any())
                 {
                     Console.WriteLine("Employee Not Found!");
                 }
-                foreach (var item in employees)
+                else
                 {
-                    var emp = ($"Id: {item.Id} - Name: {item.Name} - Surname: {item.Surname} - Age: {item.Age} - Adress: {item.Address} - Department: {item.Department.Name}");
-                    Console.WriteLine(emp);
+                    foreach (var item in employees)
+                    {
+                        var emp = ($"Id: {item.Id} - Name: {item.Name} - Surname: {item.Surname} - Age: {item.Age} - Address: {item.Address} - Department: {item.Department.Name}");
+                        Console.WriteLine(emp);
+                    }
                 }
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
                 goto DepN;
             }
         }
-
-
         public async Task SearchByNameOrSurnameAsync()
         {
             Console.WriteLine("Please Enter the Name or Surname: ");
@@ -402,14 +397,11 @@ namespace CompanyApp_MiniApp.Controller
                 goto search;
             }
         }
-
         public async Task GetCountAsync()
         {
             var count = await _employeeService.GetCountAsync();
             Console.WriteLine($"Employees Count: {count}");
         }
-
-
         public async Task SortEmployeesByAgeAsync()
         {
             while (true)

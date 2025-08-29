@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Service.Services;
 using Service.Services.Interfaces;
+using System.Text.RegularExpressions;
 
 namespace CompanyApp_MiniApp.Controller
 {
@@ -28,79 +29,93 @@ namespace CompanyApp_MiniApp.Controller
 
 
 
-        public async Task RegisterAsync()
+
+    public async Task RegisterAsync()
+    {
+        try
         {
-            try
+            var allUser = await _userService.GetAllAsync();
+
+        UserName:
+            Console.WriteLine("Enter fullname:");
+            string fullName = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(fullName) || string.IsNullOrWhiteSpace(fullName))
             {
-                var allUser = await _userService.GetAllAsync();
-
-            UserName: Console.WriteLine("Enter fullname:");
-                string fullName = Console.ReadLine();
-                if (string.IsNullOrEmpty(fullName) || fullName.Trim().Length == 0)
-                {
-                    Console.WriteLine("Field can't be Empty!");
-                    goto UserName;
-                }
-                if (string.IsNullOrWhiteSpace(fullName))
-                {
-                    Console.WriteLine("Please Enter the Name: ");
-                    goto UserName;
-                }
-            UserMail: Console.WriteLine("Enter the email: ");
-                string userEmail = Console.ReadLine();
-                if (string.IsNullOrEmpty(userEmail))
-                {
-                    Console.WriteLine("Field can't be Empty!");
-                    goto UserMail;
-                }
-                if (allUser.Any(x => x.Email == userEmail))
-                {
-                    Console.WriteLine("Email Already Exists, Please Enter Another One!");
-                    goto UserMail;
-                }
-                if (string.IsNullOrWhiteSpace(userEmail) || !userEmail.Contains("@"))
-                {
-                    Console.WriteLine("Invalid Email Format. Please Try Again!");
-                    goto UserMail;
-                }
-
-            Password: Console.WriteLine("Enter password:");
-                string password = Console.ReadLine();
-                if (string.IsNullOrEmpty(password) || password.Trim().Length == 0)
-                {
-                    Console.WriteLine("Confirm Password is Required! Please Try Again!");
-                    goto Password;
-                }
-                if (!password.Any(char.IsDigit))
-                {
-                    Console.WriteLine("Password must contain at least one number!");
-                    goto Password;
-                }
-
-            Confirm: Console.WriteLine("Enter confirm password:");
-                string confirmPass = Console.ReadLine();
-                if (string.IsNullOrEmpty(confirmPass) || confirmPass.Trim().Length == 0)
-                {
-                    Console.WriteLine("Confirm Password is Required! Please Try Again!");
-                    goto Confirm;
-                }
-                if (confirmPass != password)
-                {
-                    Console.WriteLine("Passwords do not match. Please try again!");
-                    goto Confirm;
-                }
-
-                await _userService.RegisterAsync(new User { FullName = fullName, Email = userEmail, Password = password });
-                Console.WriteLine("User Created Successfully!");
+                Console.WriteLine("Field can't be Empty!");
+                goto UserName;
             }
-            catch (Exception ex)
+
+            if (!Regex.IsMatch(fullName, @"^[a-zA-Z\s]+$"))
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Full name cannot contain numbers or special characters!");
+                goto UserName;
             }
+
+        UserMail:
+            Console.WriteLine("Enter the email: ");
+            string userEmail = Console.ReadLine();
+            if (string.IsNullOrEmpty(userEmail))
+            {
+                Console.WriteLine("Field can't be Empty!");
+                goto UserMail;
+            }
+            if (allUser.Any(x => x.Email == userEmail))
+            {
+                Console.WriteLine("Email Already Exists, Please Enter Another One!");
+                goto UserMail;
+            }
+            if (string.IsNullOrWhiteSpace(userEmail) || !userEmail.Contains("@"))
+            {
+                Console.WriteLine("Invalid Email Format. Please Try Again!");
+                goto UserMail;
+            }
+
+        Password:
+            Console.WriteLine("Enter password:");
+            string password = Console.ReadLine();
+            if (string.IsNullOrEmpty(password) || password.Trim().Length == 0)
+            {
+                Console.WriteLine("Confirm Password is Required! Please Try Again!");
+                goto Password;
+            }
+            if (!password.Any(char.IsDigit))
+            {
+                Console.WriteLine("Password must contain at least one number!");
+                goto Password;
+            }
+
+        Confirm:
+            Console.WriteLine("Enter confirm password:");
+            string confirmPass = Console.ReadLine();
+            if (string.IsNullOrEmpty(confirmPass) || confirmPass.Trim().Length == 0)
+            {
+                Console.WriteLine("Confirm Password is Required! Please Try Again!");
+                goto Confirm;
+            }
+            if (confirmPass != password)
+            {
+                Console.WriteLine("Passwords do not match. Please try again!");
+                goto Confirm;
+            }
+
+            await _userService.RegisterAsync(new User
+            {
+                FullName = fullName,
+                Email = userEmail,
+                Password = password
+            });
+
+            Console.WriteLine("User Created Successfully!");
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
 
 
-        public async Task LoginAsync()
+    public async Task LoginAsync()
         {
             try
             {

@@ -79,9 +79,6 @@ namespace CompanyApp_MiniApp.Controller
                 goto Name;
             }
         }
-
-
-
         public async Task DeleteAsync()
         {
         Delete:
@@ -123,7 +120,6 @@ namespace CompanyApp_MiniApp.Controller
                 goto Delete;
             }
         }
-
         public async Task GetAllAsync()
         {
             IEnumerable<Department> departments = await _deparmentService.GetAllAsync();
@@ -138,7 +134,6 @@ namespace CompanyApp_MiniApp.Controller
                 Console.WriteLine(depart);
             }
         }
-
         public async Task GetByIdAsync()
         {
         Id:
@@ -175,8 +170,6 @@ namespace CompanyApp_MiniApp.Controller
             }
 
         }
-
-
         public async Task SearchAsync()
         {
             while (true)
@@ -230,11 +223,9 @@ namespace CompanyApp_MiniApp.Controller
                 }
             }
         }
-
         public async Task UpdateDepartmentAsync()
         {
         top:
-
             try
             {
                 Console.WriteLine("Please Enter the Department Id:");
@@ -252,52 +243,57 @@ namespace CompanyApp_MiniApp.Controller
                     Console.WriteLine("Id can't be Negative!");
                     goto top;
                 }
+
                 var existingDepartment = await _deparmentService.GetByIdAsync(givenId);
                 if (existingDepartment == null)
                 {
                     Console.WriteLine("Department not Found!");
                     goto top;
                 }
+
                 Console.WriteLine($"Current department name is {existingDepartment.Name}");
 
             nameUpdate:
                 Console.WriteLine("Please Enter the New Name: ");
                 string newName = Console.ReadLine()?.Trim();
+
                 if (string.IsNullOrWhiteSpace(newName))
                 {
-                    newName = existingDepartment.Name;
+                    newName = existingDepartment.Name; // boş qoyanda əvvəlki ad qalsın
                 }
 
                 var existingDepartments = await _deparmentService.SearchAsync(newName);
                 if (existingDepartments != null && existingDepartments.Any(d => d.Name.Equals(newName, StringComparison.OrdinalIgnoreCase) && d.Id != existingDepartment.Id))
                 {
-                    Console.WriteLine("This Department Name is Already Exist! Please Enter Another one: ");
+                    Console.WriteLine("This Department Name Already Exists! Please Enter Another one: ");
                     goto nameUpdate;
                 }
+
             capacityUpdate:
                 Console.WriteLine($"Current capacity is: {existingDepartment.Capacity}");
                 Console.WriteLine("Please Enter the New Capacity");
 
-                string newCapacityInput = Console.ReadLine();
+                string newCapacityInput = Console.ReadLine()?.Trim();
                 int givencapacity;
-                bool isCorrect = int.TryParse(newCapacityInput, out givencapacity);
-                if (!isCorrect)
-                {
-                    Console.WriteLine("Capacity Format ia Wrong! Please Insert Again: ");
-                    goto capacityUpdate;
-                }
 
                 if (string.IsNullOrWhiteSpace(newCapacityInput))
                 {
-                    newCapacityInput = existingDepartment.Capacity.ToString();
+                    givencapacity = existingDepartment.Capacity;
                 }
-
-
-
-                if (givencapacity <= 0)
+                else
                 {
-                    Console.WriteLine("Capacity Must be a Positive Number!");
-                    goto capacityUpdate;
+                    bool isCorrect = int.TryParse(newCapacityInput, out givencapacity);
+                    if (!isCorrect)
+                    {
+                        Console.WriteLine("Capacity Format is Wrong! Please Insert Again: ");
+                        goto capacityUpdate;
+                    }
+
+                    if (givencapacity <= 0)
+                    {
+                        Console.WriteLine("Capacity Must be a Positive Number!");
+                        goto capacityUpdate;
+                    }
                 }
 
                 existingDepartment.Name = newName;
