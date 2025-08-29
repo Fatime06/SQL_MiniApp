@@ -207,7 +207,7 @@ namespace CompanyApp_MiniApp.Controller
                     goto GetId;
                 }
 
-                string data = ($"Id: {employee.Id} - Name: {employee.Name} - Surname: {employee.Surname} - Age: {employee.Age} - Adress: {employee.Address} - Department: {employee.Department.Name}");
+                string data = ($"Id: {employee.Id} - Name: {employee.Name} - Surname: {employee.Surname} - Age: {employee.Age} - Adress: {employee.Address} ");
                 Console.WriteLine(data);
             }
             catch (Exception ex)
@@ -259,7 +259,7 @@ namespace CompanyApp_MiniApp.Controller
                     Console.WriteLine("Employee Not Found!");
                     goto GetAge;
                 }
-                foreach (var item in employees)
+                foreach (Employee item in employees)
                 {
                     string result = ($"Id: {item.Id} - Name: {item.Name} - Surname: {item.Surname} - Age: {item.Age} - Adress: {item.Address} - Department: {item.Department.Name}");
                     Console.WriteLine(result);

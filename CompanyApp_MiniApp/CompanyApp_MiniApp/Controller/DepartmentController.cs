@@ -106,14 +106,16 @@ namespace CompanyApp_MiniApp.Controller
                     goto Delete;
                 }
 
-                var deletedDep = _deparmentService.GetByIdAsync(givenInt);
+                var deletedDep = await _deparmentService.GetByIdAsync(givenInt); // <-- await əlavə edildi
 
                 if (deletedDep == null)
                 {
                     Console.WriteLine("Department not Found!");
                     goto Delete;
                 }
+
                 await _deparmentService.DeleteAsync(givenInt);
+                Console.WriteLine("Department deleted successfully.");
             }
             catch (Exception ex)
             {

@@ -7,6 +7,7 @@ C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\n
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\Domain.sourcelink.json
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\Domain.dll
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Domain\obj\Debug\net8.0\Domain.pdb

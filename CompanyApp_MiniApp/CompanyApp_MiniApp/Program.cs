@@ -1,7 +1,7 @@
 ﻿using CompanyApp_MiniApp.Controller;
 using Service.Helpers.Enums;
 
-Console.WriteLine("Hello, World!");
+//Console.WriteLine("Hello, World!");
 
 
 DepartmentController departmentController = new DepartmentController();
@@ -48,7 +48,7 @@ Operation1: string operationStr1 = Console.ReadLine();
                 await employeeController.GetAllAsync();
                 break;
             case (int)Operations.EmployeesByAge:
-                await employeeController.GetByIdAsync();
+                await employeeController.GetAllEmployeesByAgeAsync();
                 break;
             case (int)Operations.EmployeeByDepartmentId:
                 await employeeController.GetEmployeeByDepartmentIdAsync();

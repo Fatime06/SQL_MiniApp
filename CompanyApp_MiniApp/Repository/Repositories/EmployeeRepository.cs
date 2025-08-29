@@ -13,7 +13,7 @@ namespace Repository.Repositories
     {
         public async Task<IEnumerable<Employee>> GetAllEmployeesByAgeAsync(int age)
         {
-            return await _dbContext.employees.Where(m=>m.Age==age).ToListAsync();
+            return await _dbContext.employees.Include(m=>m.Department).Where(m=>m.Age==age).ToListAsync();
         }
 
         public async Task<int> GetCountAsync()
@@ -46,6 +46,11 @@ namespace Repository.Repositories
             {
                 return await _dbContext.employees.OrderByDescending(m => m.Age).ToListAsync();
             }
+        }
+
+        public override async Task<IEnumerable<Employee>> GetAllAsync()
+        {
+            return await _dbContext.employees.Include(m=>m.Department).ToListAsync();
         }
     }
 }

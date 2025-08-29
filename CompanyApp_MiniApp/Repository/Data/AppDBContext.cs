@@ -18,5 +18,7 @@ namespace Repository.Data
 
         public DbSet<Employee> employees { get; set; }
         public DbSet<Department> departments { get; set; }
+        public DbSet<User> users { get; set; }
+
     }
 }

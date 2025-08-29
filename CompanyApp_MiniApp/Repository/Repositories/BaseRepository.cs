@@ -28,9 +28,10 @@ namespace Repository.Repositories
         public async Task DeleteAsync(T entity)
         {
             _table.Remove(entity);
+            await SaveChangeAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _table.ToListAsync();
         }

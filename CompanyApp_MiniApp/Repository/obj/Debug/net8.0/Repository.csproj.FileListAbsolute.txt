@@ -9,10 +9,10 @@ C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Deb
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.AssemblyInfoInputs.cache
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.AssemblyInfo.cs
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.sourcelink.json
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.csproj.Up2Date
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.dll
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\refint\Repository.dll
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.pdb
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.genruntimeconfig.cache
 C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\ref\Repository.dll
-C:\Users\User\OneDrive\Desktop\SQL_MiniApp\CompanyApp_MiniApp\Repository\obj\Debug\net8.0\Repository.sourcelink.json
