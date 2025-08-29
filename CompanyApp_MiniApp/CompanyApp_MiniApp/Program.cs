@@ -6,6 +6,47 @@ using Service.Helpers.Enums;
 
 DepartmentController departmentController = new DepartmentController();
 EmployeeController employeeController = new EmployeeController();
+UserController userController = new UserController();
+
+
+
+await userController.GetAllAsync();
+
+while (!userController.Login)
+{
+    Console.WriteLine("Login options: ");
+    Console.WriteLine("1 - Login");
+    Console.WriteLine("2 - Register");
+
+User: string optionStr = Console.ReadLine();
+    bool isCorrectOption = int.TryParse(optionStr, out int option);
+    if (isCorrectOption)
+    {
+        switch (option)
+        {
+            case 1:
+                await userController.LoginAsync();
+                break;
+            case 2:
+                await userController.RegisterAsync();
+                break;
+            default:
+                Console.WriteLine("Operation is Wrong, Choose Again!");
+                goto User;
+        }
+    }
+    else
+    {
+        Console.WriteLine("Operation Format is Wrong, Try Again!");
+        goto User;
+    }
+}
+
+
+
+
+
+
 
 while (true)
 {
